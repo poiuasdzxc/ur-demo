@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UR-list</title>
+    <link rel="stylesheet" href="../css/model/list.css">
+</head>
+<body>
+    <!-- 用来加载头部的容器 -->
+  <header id="header-container"></header>
+
+    <!-- 列表页的主体区域开始 -->
+    <div class="main">
+        <div class="main-top"></div>
+        <div class="main-bottom">
+         <div class="aside-left"> 
+            <ul class="aside-left-top">
+                <li>
+                <a href="javascript:;" class="weeknew" >本周新品</a>
+                <ul >
+                    <li> <a href="javascript:;">全部新品</a></li>
+                    <li> <a href="javascript:;">UR FM</a></li>
+                    <li> <a href="javascript:;">UR IMAGE</a></li>
+                    <li> <a href="javascript:;">女士</a></li>
+                    <li> <a href="javascript:;">青春</a></li>
+                    <li> <a href="javascript:;">配饰 </a></li>
+                    <li> <a href="javascript:;">男士</a></li>
+                </ul>
+                </li>
+    
+                <li>
+                <a href="javascript:;" class="weeknew">人气爆品</a>
+                <ul>
+                    <li> <a href="javascript:;">全部商品</a></li>
+                    <li> <a href="javascript:;">热卖单品</a></li>
+                    <li> <a href="javascript:;">牛仔游乐</a></li>
+                    <li> <a href="javascript:;">园</a></li>
+                    <li> <a href="javascript:;">夏日连衣裙</a></li>
+                    <li> <a href="javascript:;">潮男新天地</a></li>
+                    <li> <a href="javascript:;">等你</a></li>
+                    <li> <a href="javascript:;">打包</a></li>
+                    <li> <a href="javascript:;">等你</a></li>
+                    <li> <a href="javascript:;">打包</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;"  class="weeknew" >女士</a></li>
+                <li><a href="javascript:;"  class="weeknew" >青春</a></li>
+                <li><a href="javascript:;"  class="weeknew" >男士</a></li>
+                <li><a href="javascript:;"  class="weeknew" >配饰</a></li>
+                <li><a href="javascript:;"  class="weeknew" >限时优享</a></li>
+            </ul>
+            <ul class="aside-left-bottom">
+                <li>
+                    <a href="javascript:;"  class="weeknew">+资讯</a>
+                    <ul>
+                        <li> <a href="javascript:;">EVENT</a></li>
+                        <li> <a href="javascript:;">CAMPAIGN</a></li>
+                    </ul>
+                </li>
+                <li> <a href="javascript:;"  class="weeknew">品牌</a></li>
+            </ul>    
+        </div>
+        <!-- 引入假数据 -->
+        <div class="aside-right">
+            <div class="shop-list" id="shop-container"></div>
+            <script type="text/html" id="shop-template">
+               <ul>
+                   {{each list shop}}
+                   <li>
+                    <a href="/html/detail.html?id={{shop.id}}">
+                        <p><img src="{{shop.image}}"></p>
+                        <p id="title">{{shop.title}}</p>
+                        <p id="price">￥{{shop.price}}</p>
+                    </a> 
+                   </li>
+                   {{/each}}
+               </ul>  
+            </script>
+            
+
+        </div>
+      </div>
+    </div>
+    <!-- 列表页的主体区域结束 -->
+     <!-- 用来加载底部的容器 -->
+  <footer id="footer-container" ></footer>
+  <script src="/libs/require/require.min.js" data-main="/js/list"></script>
+</body>
+</html>

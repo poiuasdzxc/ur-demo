@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UR</title>
+    <link rel="stylesheet" href="libs/swiper/css/swiper.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./libs/font/iconfont.css">
+</head>
+<body>
+    <!-- 用来加载头部的容器 -->
+  <header id="header-container"></header>
+
+  <!-- 首页的主体区域开始 -->
+  <div class="main">
+    <section class="section1">
+      <div class="aside-left">
+        <ul class="aside-left-top">
+          <li>
+            <a href="html/list.html" class="weeknew" >本周新品</a>
+            <ul >
+              <li> <a href="javascript:;">全部新品</a></li>
+              <li> <a href="javascript:;">UR FM</a></li>
+              <li> <a href="javascript:;">UR IMAGE</a></li>
+              <li> <a href="javascript:;">女士</a></li>
+              <li> <a href="javascript:;">青春</a></li>
+              <li> <a href="javascript:;">配饰 </a></li>
+              <li> <a href="javascript:;">男士</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="javascript:;" class="weeknew">人气爆品</a>
+            <ul>
+                <li> <a href="javascript:;">全部商品</a></li>
+                <li> <a href="javascript:;">热卖单品</a></li>
+                <li> <a href="javascript:;">牛仔游乐</a></li>
+                <li> <a href="javascript:;">园</a></li>
+                <li> <a href="javascript:;">夏日连衣裙</a></li>
+                <li> <a href="javascript:;">潮男新天地</a></li>
+                <li> <a href="javascript:;">等你</a></li>
+                <li> <a href="javascript:;">打包</a></li>
+                <li> <a href="javascript:;">等你</a></li>
+                <li> <a href="javascript:;">打包</a></li>
+              </ul>
+          </li>
+          <li><a href="javascript:;"  class="weeknew" >女士</a></li>
+          <li><a href="javascript:;"  class="weeknew" >青春</a></li>
+          <li><a href="javascript:;"  class="weeknew" >男士</a></li>
+          <li><a href="javascript:;"  class="weeknew" >配饰</a></li>
+          <li><a href="javascript:;"  class="weeknew" >限时优享</a></li>
+        </ul>
+        <ul class="aside-left-bottom">
+            <li>
+              <a href="javascript:;"  class="weeknew">+资讯</a>
+              <ul>
+                  <li> <a href="javascript:;">EVENT</a></li>
+                  <li> <a href="javascript:;">CAMPAIGN</a></li>
+              </ul>
+            </li>
+            <li> <a href="javascript:;"  class="weeknew">品牌</a></li>
+        </ul>
+      </div>
+      <div class="aside-right">
+        
+        <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://gw-img.ur.com.cn///urmall/336875c0-4458-456e-a753-9e972e4af7c6.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="https://gw-img.ur.com.cn///urmall/ee6bff3b-2a55-40f0-8789-9dfa151a0b9e.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="https://gw-img.ur.com.cn///urmall/e58c120a-a62b-4605-8f83-b7b2821da89a.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="https://gw-img.ur.com.cn///urmall/ee6bff3b-2a55-40f0-8789-9dfa151a0b9e.jpg" alt=""></div>
+            
+        </div>
+      
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+      </div>
+  </section>
+  <section class="section2">
+    <div class="shop-list" id="shop-container"></div>
+    <script type="text/html" id="shop-template">
+      <div class="list-l">
+        <a href="/html/detail.html"><img src="{{bigImg}}"></a>
+      </div>
+      <div class="list-r" >
+          <ul>
+            {{each list shop}}
+              <li>
+                  <a href="/html/detail.html?id={{shop.id}}">
+                      <p><img src="{{shop.image}}"></p>
+                      <p id="title">{{shop.title}}</p>
+                      <p id="activity">{{shop.info}}</p>
+                      <p id="price">￥{{shop.price}}</p>
+                      <span id="state">{{shop.active}}</span>
+                  </a>
+              </li>
+            {{/each}}
+          </ul>
+      </div>
+    </script>
+  </section>
+  <section class="section3"></section>
+  </div>
+  <!-- 首页的主体区域结束 -->
+
+  <!-- 用来加载底部的容器 -->
+  <footer id="footer-container" ></footer>
+  <script src="libs/require/require.min.js" data-main="js/index"></script>
+</body>
+</html>

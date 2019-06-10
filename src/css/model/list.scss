@@ -1,0 +1,93 @@
+@import './reset.scss';
+@import './header.scss';
+@import './footer.scss';
+
+.main{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    .main-top{
+        width: 1200px;
+        height: 100px;
+    }
+    .main-bottom{
+        display:flex;
+        width: 1200px;
+        justify-content: space-between;
+        .aside-left{
+            // height: 560px;
+             width: 130px;
+             font-size:20px;
+             &-top,&-bottom{
+                width: 130px;
+               //  height: 283px;
+                li{
+                   width: 130px;
+                   // height: 40px;
+                   // line-height: 40px;
+                   display: block;
+                   
+                   a{
+                       color:#343434;
+                       font-weight:bolder;
+                    }
+                   ul{
+                        height:0;
+                        width: 130px;
+                        overflow: hidden;
+                       
+                        li{
+                           width: 100%;
+                           height: 30px;
+                           padding-left: 20px;
+                           font-weight: normal;
+                           
+                           a{
+                               font-weight: normal;
+                               
+                           }
+                        }
+                        li:hover{
+                           background: url(../img/list.png) no-repeat -5px center;
+                        }
+    
+                    }
+                }
+            }
+            &-bottom{
+                margin-top: 100px;
+                li{
+                    a{color:#9b9b9b; }
+                }
+             }
+        }
+       
+    .aside-right{
+            width: 1060px;
+            height:200px;
+            border:1px sold;
+            #shop-container{
+                width: 100%;
+                ul{
+                   
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    li{
+                        width: 22%;
+                        height: 200px;
+                        #title{
+                            // color: #343434;
+                        }
+                        #price{
+                            color:#9b9b9b;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}
