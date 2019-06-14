@@ -13,12 +13,12 @@ require(['./config'],() =>{
              falsData(){
                  // 负责渲染热销模块
                 $.get(url.baseUrl +'/shophot/get',resp=> {
-                    console.log(resp);
+                    // console.log(resp);
                     if(resp.res_code ===200){
                         this.renderHot(resp.list)
                     }
                 })
-                console.log(456)
+               
             }
            // 渲染热销产品 
             renderHot(resBody){
@@ -27,19 +27,20 @@ require(['./config'],() =>{
                      list:resBody,
                  })
                  $('#shop-container').html(html)
-                 console.log(html)
-            }
+                }
             // 下拉菜单
             leftTab(){
                 console.log(123)
                 $('.aside-left').on('click','.weeknew',function(){
-                    console.log($(this).parent());
-                    if($(this).parent().children('ul').height()===0){
-                     $(this).parent().children('ul').height('auto');
+                    //  console.log($(this).parent().children('ul').height());
+                    if($(this).parent().children('ul').height()==0){
+                        console.log(1222211)
+                          $(this).parent().children('ul').css('height','auto');
+                        //  console.log($(this).parent().children('ul').height());
                     }else{
+                        console.log(111)
                         $(this).parent().children('ul').height(0);
                        }
-                     console.log(this)
                    })
             }
 

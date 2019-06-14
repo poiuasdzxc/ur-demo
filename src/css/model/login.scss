@@ -1,0 +1,162 @@
+@import './reset.scss';
+@import './header.scss';
+@import './footer.scss';
+
+.main{
+    width: 1200px;
+    padding:0 30px;
+    height: 660px;
+    border-bottom:1px solid #9b9b9b;
+    margin:0 auto;
+   
+    &-top{
+        width: 350px;
+        height: 50px;
+        margin-left: 30px;
+        p{  width: 100%;
+            font-size:25px;
+            color:#9b9b9b;
+            span{
+                margin:0 2px;
+            }
+            a{
+                color:#9b9b9b;
+            }
+        }
+    }
+    &-bottom{
+        width: 100%;
+        color:#343434;
+        h3{
+            width: 1065px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 35px;
+            border-bottom:3px solid  #343434;
+        }
+        .bottom{
+            width: 1065px;
+            height: 470px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom:1px solid #9b9b9b;
+            &-left{
+                // height: 100%;
+                width: 529px;
+                border-right:1px solid #9b9b9b;
+                position: relative;
+                .container{
+                    position: absolute;
+                    
+                    .more{
+                        flex-direction: column;
+                        width: 270px;
+                        position: relative;
+                        span{
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: left;
+                        }
+                        input{
+                            display: block;
+                            height: 50px;
+                            border:none;
+                        }
+                        .code{
+                            position: absolute;
+                            top:50px;
+                            right:-140px;
+                            font-size:15px;
+                            border:1px solid #9b9b9b;
+                            text-align: center;
+                            border-radius: 10px;
+                        }  
+                    }
+                    .user{
+                        height: 30px;
+                        line-height: 30px;
+                        width: 270px;
+                        border:none;
+                    }
+                }
+                .xia:hover{
+                    color: #343434;
+                    background:url(../../img/xia.png)  no-repeat center bottom;
+                }
+                p{
+                    height: 90px;
+                    width: 376px;
+                    display: flex;
+                    // justify-content: space-between;
+                    color:#9b9b9b;
+                    border-bottom:1px solid #9b9b9b;
+                    span{
+                        display: block;
+                        height: 100%;
+                        line-height:90px; 
+                        width: 50%;
+                        text-align: center;
+                        font-size: 20px;
+                        padding-bottom:30px;
+                    }
+                }
+                .logo{
+                    margin-top: 240px;
+                    height: 50px;
+                    line-height: 50px;
+                    border:none;
+                    display: flex;
+                    text-align: center;
+                 
+                    input{
+                        margin-top:40px;
+                        
+                    }
+                   
+                }
+                .logo2{
+                    margin-top: 2px;
+                    height: 50px;
+                    border:none;
+                    a{
+                        display: block;
+                        width: 200px;
+                        height: 35px;
+                        color:white;
+                        background-color: #343434;
+                        text-align: center;
+                        line-height: 35px;
+                        margin: auto 0;
+                    }
+                }
+                
+                .container2{
+                    position: absolute;
+                     display: none;
+                }
+            }
+            &-right{
+                height: 100%;
+                width: 540px;
+                color: #a1a1a1;
+                p{
+                    margin: 25px 50px;
+                    height: 20px;
+                    line-height: 20px;
+                    width: 295px;
+                    // white-space: wrap;
+                    font-size:18px;
+                }
+                .bolder{
+                    color:#343434;
+                    margin-top:100px;
+                }
+                .color{
+                    margin-top:0px;
+                }
+            }
+        }
+        
+    }
+}

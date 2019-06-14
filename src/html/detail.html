@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UR-detail</title>
+    <link rel="stylesheet" href="../css/model/detail.css">
+    <link rel="stylesheet" href="../libs/font/iconfont.css">
+</head>
+<body>
+    <!-- 用来加载头部的容器 -->
+  <header id="header-container"></header>
+  <!-- 列表页的主体区域开始 -->
+  <div class="main">
+    <div class="aside-left"> 
+        <ul class="aside-left-top">
+            <li>
+            <a href="javascript:;" class="weeknew" >本周新品</a>
+            <ul >
+                <li> <a href="list.html">全部新品</a></li>
+                <li> <a href="list.html">UR FM</a></li>
+                <li> <a href="list.html">UR IMAGE</a></li>
+                <li> <a href="javascript:;">女士</a></li>
+                <li> <a href="javascript:;">青春</a></li>
+                <li> <a href="javascript:;">配饰 </a></li>
+                <li> <a href="javascript:;">男士</a></li>
+            </ul>
+            </li>
+
+            <li>
+            <a href="javascript:;" class="weeknew">人气爆品</a>
+            <ul>
+                <li> <a href="javascript:;">全部商品</a></li>
+                <li> <a href="javascript:;">热卖单品</a></li>
+                <li> <a href="javascript:;">牛仔游乐</a></li>
+                <li> <a href="javascript:;">园</a></li>
+                <li> <a href="javascript:;">夏日连衣裙</a></li>
+                <li> <a href="javascript:;">潮男新天地</a></li>
+                <li> <a href="javascript:;">等你</a></li>
+                <li> <a href="javascript:;">打包</a></li>
+                <li> <a href="javascript:;">等你</a></li>
+                <li> <a href="javascript:;">打包</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:;"  class="weeknew" >女士</a></li>
+            <li><a href="javascript:;"  class="weeknew" >青春</a></li>
+            <li><a href="javascript:;"  class="weeknew" >男士</a></li>
+            <li><a href="javascript:;"  class="weeknew" >配饰</a></li>
+            <li><a href="javascript:;"  class="weeknew" >限时优享</a></li>
+        </ul>
+        <ul class="aside-left-bottom">
+            <li>
+                <a href="javascript:;"  class="weeknew">+资讯</a>
+                <ul>
+                    <li> <a href="javascript:;">EVENT</a></li>
+                    <li> <a href="javascript:;">CAMPAIGN</a></li>
+                </ul>
+            </li>
+            <li> <a href="javascript:;"  class="weeknew">品牌</a></li>
+        </ul>    
+    </div>
+          
+    <div class="aside-right" id="shop-container"></div>
+    <!-- <div class="shop-list" id="shop-container"></div> -->
+        <script type="text/html" id="shop-template">
+            <div class="aside-right-left" >
+                <!-- 放大镜 -->
+                <div class="product-img-big">
+                    <img  class="zoom-img img1" src="{{bigImg}}" alt="图片未加载">
+                </div>
+                <div class="product-img-min">
+                    <div class="back"><a href="javascript:;"></a></div>
+                    <div class="nav-img" id="product-img"></div>
+                </div>
+                <!-- 放大镜详情图片 -->
+                <div class="list-img">
+                    {{each list shop}}              
+                    <img class="list-img" src="{{shop}}" alt="详情图片">
+                    {{/each}}
+                </div>
+            </div>
+        
+        <div class="aside-right-center"></div>
+        <div class="aside-right-right">
+            <section class="info">
+                <p class="style-font">商品信息：</p>
+                <p class="style-font2">{{title}}</p>
+                <p class="style-font">商品属性:</p>
+                <p class="style-font3" style="border-bottom:none;" id="shopTitle">{{title}}</p>
+                <p class="style-font3">腰，优雅有气质</p>
+                <p class="style-font">材质:</p>
+                <p class="style-font2">{{origin}}</p>
+                <p class="style-font2" style="font-size:20px;font-weight:normal;"><span>销售价：</span><span id="shopPrice">{{price}}</span></p>
+            </section>
+            <section class="select">
+                <div class="top">
+                    <p class="style-font">颜色:</p>
+                    <img src="https://gw-img.ur.com.cn//urmall/uploadImportTmp/1ff84e32-4652-4bf5-a64e-6b75587da0ee/WG20S7ET2000_B6/0.jpg" alt="">
+                </div>
+                <div  class="bottom">
+                    <p>
+                        <span >选择尺码:</span>
+                        <span id="sizeTab">查看尺码对照表</span>
+                     </p>
+                    <p>S(155/80A)</p>
+                    <p>S(160/84A)</p>
+                    <p>S(165/88A)</p>
+                    <p>S(170/92A)</p>
+                </div>
+            </section>
+            <section class="shop-info">
+                <p>推荐尺码</p>
+                <p>为您推荐尺码</p>
+                <span class="span">身高(cm)：</span><input type="text">
+                <span>体重(kg)：</span><input type="text">
+                <a href="javascript:;" class="btn" >确认</a>
+                <div class="cart-num">
+                    <i>数量：</i>
+                   <p><span id="reduceNum">-</span><input id= "num-input" class="number" value="1"></input><span id="addNum">+</span></p>
+                </div>
+                <a href="http://localhost:2334/html/cart.html" class="btn btn2" style="background-color: #343434;color:white;" >立即购买</a>
+                <a href="javascript:;" class="btn btn2 " id="add-cart">加入购物袋</a>
+                <a href="javascript:;" class="btn btn2">收藏</a>
+            </section>
+            <section class="state">
+                <p>
+                    <span>发货时间：2-7个工作日</span>
+                    <span>物流通知：由于发货升级，如您的购</span>
+                    <span>买了两件以上产品有可能分包裹发</span>
+                    <span>货，请知悉，谢谢。</span>
+                </p>
+               <ul class="detailTab">
+                   <li class="detail">
+                       洗涤说明 <span>+</span>
+                     <p>
+                            洗涤养护：建议深浅颜色分开洗涤，洗涤温度不高于30度，常规程序，不可漂白，通风处自然晾干，不宜长时间浸泡以及暴晒，烫斗底板温度不高于110度。
+                     </p>
+                    </li>
+                   <li class="detail">价格说明 <span>+</span></li>
+                   <li class="detail">退货换货说明 <span>+</span></li>
+                   <li class="detail">查看其他门店库存情况 <span>+</span></li>
+               </ul>
+            </section>
+        </div>
+    </script>   
+
+  </div>
+  <div class="popBox" id="popBox">
+        <h3>尺码对照表&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="delBtn">X</span></h3>
+        <ul>
+           <li>
+                <span>尺码</span><span>号型</span> <span>衣长</span>
+                <span>胸围</span><span>下摆围</span>
+           </li>
+           <li>
+                   <span>S</span><span>155/80A</span> <span>97.70</span>
+                   <span>86.00</span><span>176.00</span>
+           </li>
+           <li>
+                   <span>S</span><span>155/80A</span> <span>97.70</span>
+                   <span>86.00</span><span>176.00</span>
+           </li>
+           <li>
+                   <span>S</span><span>155/80A</span> <span>97.70</span>
+                   <span>86.00</span><span>176.00</span>
+           </li>
+        </ul>
+    </div>
+  <!-- 列表页的主体区域结束 -->
+     <!-- 用来加载底部的容器 -->
+     <footer id="footer-container" ></footer>
+     <script src="/libs/require/require.min.js" data-main="/js/detail"></script>
+
+</body>
+</html>

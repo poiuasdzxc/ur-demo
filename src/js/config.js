@@ -9,5 +9,20 @@ require.config({
         template: 'libs/art-template/template-web',
         swiper: 'libs/swiper/js/swiper',
         list: 'js/list',
+        elevatezoom: 'libs/jquery-plugains/jquery.elevatezoom',
+        fly: 'libs/jquery-plugains/jquery.fly',
+        login: 'js/login',
+        cookie: 'libs/jquery-plugains/jquery.cookie',
+    },
+    shim:{
+        elevatezoom:{
+            deps: ['jquery']
+        },
+        fly:{
+            deps: ['jquery']
+        },
+        cookie:{
+            deps: ['jquery']
+        },
     }
 })

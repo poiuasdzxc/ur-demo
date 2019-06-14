@@ -32,9 +32,10 @@
                         font-weight:bolder;
                      }
                     ul{
-                         height:0;
+                         height:auto;
                          width: 130px;
-                         overflow: hidden;
+                         display: none;
+                        
                         
                          li{
                             width: 100%;

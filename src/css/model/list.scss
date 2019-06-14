@@ -9,7 +9,28 @@
     align-items: center;
     .main-top{
         width: 1200px;
-        height: 100px;
+        height: 30px;
+        ul{
+            float:right;
+            width:200px;
+            height: 20px;
+            li{
+                width:200px; 
+                // display:flex;
+                justify-content: space-between;
+             span{
+                height: 20px;
+                line-height: 20px;
+                width: 30px;
+                font-size:15px;
+              }
+              .xian{
+                  border:1px solid #9b9b9b;
+                  margin: 0 10px;
+              }
+            }
+            
+        }
     }
     .main-bottom{
         display:flex;
@@ -21,7 +42,7 @@
              font-size:20px;
              &-top,&-bottom{
                 width: 130px;
-               //  height: 283px;
+                height: 283px;
                 li{
                    width: 130px;
                    // height: 40px;
@@ -33,7 +54,7 @@
                        font-weight:bolder;
                     }
                    ul{
-                        height:0;
+                        height:0px;
                         width: 130px;
                         overflow: hidden;
                        
@@ -65,7 +86,7 @@
        
     .aside-right{
             width: 1060px;
-            height:200px;
+           
             border:1px sold;
             #shop-container{
                 width: 100%;
@@ -74,13 +95,18 @@
                     display: flex;
                     justify-content: space-between;
                     flex-wrap: wrap;
+                    align-content:space-between;
                     li{
                         width: 22%;
-                        height: 200px;
+                        height: 300px;
+                        text-align:center;
                         #title{
-                            // color: #343434;
+                            height: 20px;
+                            margin: 10px 0;
+                             color: #343434;
                         }
                         #price{
+                            height: 20px;
                             color:#9b9b9b;
                         }
                     }

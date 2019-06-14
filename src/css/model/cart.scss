@@ -1,0 +1,142 @@
+@import './reset.scss';
+@import './header.scss';
+@import './footer.scss';
+.main{
+    width: 100%;
+    padding:0 30px;
+    &-top{
+        width: 350px;
+        height: 50px;
+        margin-left: 30px;
+        p{  width: 100%;
+            font-size:25px;
+            color:#9b9b9b;
+            span{
+                margin:0 2px;
+            }
+            a{
+                color:#9b9b9b;
+            }
+        }
+    }
+    &-bottom{
+        width: 1200px;
+        // display: flex;
+        // flex-direction: column;
+        h3{
+            height: 50px;
+            line-height: 30px;
+            text-align: center;
+            font-size:25px;
+            border-bottom: 2px solid #9b9b9b;
+        }
+        &-center{
+           
+            ul{
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 2px solid #9b9b9b;
+                li{
+                    width: 17%;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                }
+                .allCheck{
+                    width: 260px; 
+                    text-align: left; 
+                }
+            }
+            .section1{
+                height: 250px;
+                width: 100%;
+                display: flex;
+                 justify-content: space-between;
+                &-left{
+                    width: 220px;
+                    height: 260px;
+                    margin:15px 0;
+                    dl{
+                        height: 150px;
+                        display: flex;
+                        justify-content: space-between;
+                        dt,img{
+                            width: 90px;
+                            height: 140px;
+                        }
+                        dd{
+                            width: 90px;
+                            height: 35px;
+                            line-height: 35px;
+                            a{
+                                color:#343434;
+                                font-weight: bolder;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+                &-right{
+                    width: 950px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    p{
+                        width: 23%;
+                        text-align: center;
+                        line-height: 250px;
+                        input{
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            text-align: center;
+                            margin:0 5px;
+                        }
+                    }
+                }
+            }
+        }
+        &-bottom{
+            height: 155px;
+            display: flex;
+            justify-content: space-between;
+            &-left{
+                width: 220px;
+                a{
+                    display: block;
+                    text-align: center;
+                    height: 35px;
+                    line-height: 35px;
+                    width: 80px;
+                    color :#9b9b9b;
+                    border:1px solid #9b9b9b;
+                    margin:100px auto;
+                }
+            }
+            &-right{
+                width: 950px;
+                p{
+                    height: 40px;
+                    line-height: 40px;
+                    margin:10px auto;
+                    text-align: right;
+                    span{
+                        margin:30px;
+                        color:#9b9b9b;
+                    }
+                    input{
+                        text-align: center;
+                        height: 35px;
+                        line-height: 35px;
+                        width: 170px;
+                        color:white;
+                       background-color: #343434;
+                        border:none;
+                    }
+                }
+            }
+
+        }
+    }
+}

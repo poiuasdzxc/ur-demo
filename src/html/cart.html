@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UR-cart</title>
+    <link rel="stylesheet" href="../css/model/cart.css">
+    <link rel="stylesheet" href="../libs/font/iconfont.css">
+
+</head>
+<body>
+    <header id="header-container"></header>
+    <div class="main">
+        <div class="main-top">
+            <p>
+                <span>您的位置：</span>
+                <a href="../index.html">首页</a>>
+                <span>购物袋</span>
+            </p>
+            <p><span>您的购物车有</span><span class="shopCartNUM"></span><span>类商品</span></p>
+        </div>
+        <div class="main-bottom">
+            <h3>购&nbsp;物&nbsp;袋</h3>
+            <div class="main-bottom-center">
+                <ul>
+                    <li class="allCheck"><input type="checkbox" id="allCheck"></li>
+                    <li>颜色</li>
+                    <li>尺码</li>
+                    <li>数量</li>
+                    <li>单价</li>
+                    <li>删除</li>
+                </ul>
+                <div class="shop-container"></div>
+                <!-- <div class="section1">
+                    <div class="section1-left">
+                        <dl>
+                            <dd style="width:20px;"><input type="checkbox"></dd>
+                            <dt><img src="https://gw-img.ur.com.cn//urmall/uploadImportTmp/e88e37c4-15a9-42de-844d-e9a57d98391f/YV21S4FE2000_W0/0.jpg" alt=""></dt>
+                            <dd> 
+                                <a href="javascript:;">紧身翻领T恤</a>
+                                <p>商品编号：</p>
+                                <p>YV21S4FE2000</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="section1-right">
+                        <p>本白</p>
+                        <p>M</p>
+                        <p>
+                                <span class="reduceNum">-</span><input id= "num-input" class="number" value="2"></input><span class="addNum">+</span>
+                        </p>
+                        <p>￥<span class="price">139</span></p>
+                        <p><span class="delBtn">X</span></p>
+                    </div>
+                </div> -->
+                
+               
+
+                    
+            </div>
+            
+            <!--  -->
+            <div class="main-bottom-bottom">
+                <div class="main-bottom-bottom-left">
+                    <a href="detail.html">继续购买</a>
+                </div>
+                <div class="main-bottom-bottom-right">
+                    <p><span>商品总数:</span><span id="tolNum">5</span></p>
+                    <p><span>总金额:</span><span style="font-weight: bolder;" class=""id="tolMon">317</span></p>
+                    <p><input id="payMoney" type="button" value="结算"></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer id="footer-container" ></footer>
+    <script src="/libs/require/require.min.js" data-main="/js/cart"></script>
+
+</body>
+</html>
