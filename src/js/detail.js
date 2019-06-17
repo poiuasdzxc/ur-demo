@@ -8,6 +8,8 @@ require(['./config'],()=>{
                  // 引入假数据
                 this.falsData();
                 this.leftTab();
+                this.size="";
+                this.number=0;
                console.dir($)  
               }
 
@@ -43,6 +45,7 @@ require(['./config'],()=>{
             title:resBody.title,
             price:resBody.price,
             origin:resBody.origin,
+            
 
           })
           $('#shop-container').html(html)
@@ -56,6 +59,9 @@ require(['./config'],()=>{
                   title: $('#shopTitle').html(),
                   price: $('#shopPrice').html(),
                   image:$('.zoom-img').attr('src'),
+                  origin:$('#origin').html(),
+                  size:this.size,
+                  number:this.number,
                 
                 }
                 console.log(this.detail,"123")
@@ -65,8 +71,16 @@ require(['./config'],()=>{
               // console.log($('#sizeTab'))
               $('#sizeTab').on('click',()=>{
                 this.sizeTab();
-               
+              });
+              $('.size').each((index,item)=>{
+                console.log(item,1111)
+                $(item).on('click',()=>{
+                  this.size=$(item).html();
+                  this.init();
+                  console.log(this.size,156)
+                })
               })
+              
              
             }
               // 下拉菜单
@@ -174,11 +188,16 @@ require(['./config'],()=>{
               num=0;
             }
             $('#num-input').val(num);
+            this.number=num;
+            this.init();
+
         })
         $('#addNum').on('click',()=>{
           let num=$('#num-input').val();
            num++;
            $('#num-input').val(num);
+           this.number=num;
+            this.init();
         })
       }
       // 推荐尺码
